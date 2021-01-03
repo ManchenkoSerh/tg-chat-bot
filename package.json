@@ -4,7 +4,7 @@
   "description": "That project created to handle form on some frontend app and send his body to tg",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "npm ci && pm2 start index.js",
     "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
