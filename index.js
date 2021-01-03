@@ -40,7 +40,7 @@ const fileFilter = (req, file, cb) => {
     }
 }
 
-const upload = multer({ storage: storage, fileFilter: fileFilter });
+const upload = multer({ storage: storage, fileFilter: fileFilter, limits: { fileSize: 5000000 } });
 
 const unlinkFile = (path) => {
     fs.unlink(path, (err) => {
