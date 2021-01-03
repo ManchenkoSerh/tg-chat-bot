@@ -54,7 +54,7 @@ app.post('/sendForm', upload.single('image'), async (req, res) => {
     }
     if (req.file) {
         const photo = fs.createReadStream(req.file.path)
-        const caption = `firstname: ${req.body.firstName}\nlastname: ${req.body.lastName}`
+        const caption = `Имя: ${req.body.userName}\nНомер телефона: ${req.body.phoneNumber}\nМаркировка детали: ${req.body.detailType}`
         const sended = await bot.sendPhoto({ chat_id, photo, caption })
         logger.info(sended)
         if (sended.ok) {
@@ -65,8 +65,9 @@ app.post('/sendForm', upload.single('image'), async (req, res) => {
             res.status(sended.error_code).send(sended.description)
         }
 
+    } else {
+        res.status(400).send('Bad Request')
     }
-
 })
 
 app.all('*', (req, res) => {
