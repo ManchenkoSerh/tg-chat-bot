@@ -1,0 +1,22 @@
+{
+  "name": "tg-bot-form-handler",
+  "version": "1.0.0",
+  "description": "That project created to handle form on some frontend app and send his body to tg",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "tgapi": "^2.2.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
