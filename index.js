@@ -12,8 +12,8 @@ const app = express()
 const logger = pino({ level: 'info' });
 const expressLogger = expressPino({ logger });
 const port = process.env.PORT || 3333;
-const bot = new Bot('1598513156:AAHqugmEOz8CU6SVEjjqqYXvqVqHsO0Te6k')
-const chat_id = '1297668054'
+const bot = new Bot('1848168334:AAEobNVmQtBSNvufVfP_E3zrGNZYZPw7GNY')
+const chat_id = '238860539'
 
 app.use(helmet());
 app.use(expressLogger);
